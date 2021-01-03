@@ -1,4 +1,14 @@
 <section class="widget widget-links">
-    <h4 class="widget-title">Useful Links</h4>
-    {{navigation type="secondary"}}
+    {{#if @site.facebook}}
+        <a class="widget-social-item" href="{{facebook_url @site.facebook}}"
+           target="_blank" rel="noopener noreferrer">
+            <i class="icon icon-facebook"></i>
+        </a>
+    {{/if}}
+    {{#if @site.twitter}}
+        <a class="widget-social-item" href="{{twitter_url @site.twitter}}"
+           target="_blank" rel="noopener noreferrer">
+            <i class="icon icon-twitter"></i>
+        </a>
+    {{/if}}
 </section>
