@@ -138,3 +138,7 @@ hr::before {
 hr::after {
     left: 20px;
 }
+
+.text-white {
+    color: var(--white-color);
+}
