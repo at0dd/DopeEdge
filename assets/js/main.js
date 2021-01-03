@@ -6,7 +6,6 @@ $(function () {
     loadMore();
     video();
     gallery();
-    author();
     offCanvas();
 });
 
@@ -89,13 +88,6 @@ function gallery() {
         var height = image.attributes.height.value;
         var ratio = width / height;
         container.style.flex = ratio + ' 1 0%';
-    });
-}
-
-function author() {
-    'use strict';
-    $('.author-name').on('click', function () {
-        $(this).next('.author-social').toggleClass('enabled');
     });
 }
 
