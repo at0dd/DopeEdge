@@ -5,7 +5,7 @@
 .widget li {
     font-size: 15px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .widget li + li {
