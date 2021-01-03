@@ -39,6 +39,18 @@
     </script>
     <script src="{{asset "built/main.min.js"}}"></script>
 
+    <script type="text/javascript">
+        // Open all external links in a new tab.
+        $(document).ready(function(){
+            $('a[href^="http://"], a[href^="https://"]').not('a[href*={{@site.url}}]').attr('target','_blank');
+        });
+
+        // Disable right clicking on images.
+        $(document).on('contextmenu', 'img', function() {
+            return false;
+        });
+    </script>
+
     {{{block "scripts"}}}
 
     {{ghost_foot}}
