@@ -2,6 +2,8 @@ var html = $('html');
 
 $(function () {
     'use strict';
+    linksNewTab();
+    disableImageRightClick();
     tagFeed();
     feed();
     loadMore();
@@ -9,6 +11,22 @@ $(function () {
     gallery();
     offCanvas();
 });
+
+// Open all external links in a new tab.
+function linksNewTab() {
+    'use strict';
+    $(document).ready(function(){
+        $('a[href^="http://"], a[href^="https://"]').not('a[href*={{@site.url}}]').attr('target','_blank');
+    });
+}
+
+// Disable right clicking on images.
+function disableImageRightClick() {
+    'use strict';
+    $(document).on('contextmenu', 'img', function() {
+        return false;
+    });
+}
 
 document.addEventListener('lazyloaded', function (e) {
     'use strict';
