@@ -1,0 +1,63 @@
+.widget + .widget {
+    margin-top: 60px;
+}
+
+.widget li {
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.widget li + li {
+    margin-top: 20px;
+}
+
+.widget-title {
+    margin-bottom: 30px;
+    color: var(--secondary-text-color);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.widget-recent .recent-posts {
+    counter-reset: recent;
+}
+
+.widget-recent .recent {
+    display: flex;
+}
+
+.widget-recent .recent::before {
+    content: counter(recent);
+    margin-top: -10px;
+    margin-right: 20px;
+    color: var(--primary-color);
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 800;
+    counter-increment: recent;
+    opacity: 0.5;
+}
+
+.widget-recent .recent + .recent {
+    margin-top: 25px;
+}
+
+.widget-recent .post-header {
+    margin-bottom: 0;
+}
+
+.widget-recent .post-meta {
+    margin-bottom: 5px;
+}
+
+.widget-recent .post-meta-length {
+    display: none;
+}
+
+.widget-recent .post-title {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.3;
+}

@@ -1,0 +1,41 @@
+.off-canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 90;
+    overflow-y: scroll;
+    padding: 70px 30px 30px;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--white-color);
+    transition: transform 0.4s var(--animation-base);
+    transform: translateX(350px);
+    -webkit-overflow-scrolling: touch;
+}
+
+.canvas-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    color: var(--dark-gray-color);
+    font-size: 23px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.4s var(--animation-base);
+}
+
+.canvas-close:hover {
+    color: var(--secondary-text-color);
+}
+
+html:not(.canvas-visible) .off-canvas {
+    visibility: hidden;
+}
+
+.canvas-opened .off-canvas {
+    visibility: visible;
+    transform: translateX(0) !important;
+}
