@@ -1,6 +1,9 @@
-<article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-    {{> post-media same_height=true ratio="rectangle"}}
-    <div class="post-wrapper">
-        {{> post-header tag="h2"}}
-    </div>
-</article>
+<div class="grid-item">
+    <figure class="{{post_class}}">
+        <a class="post-link" href="{{url}}">
+            <img class="post-image lazyload" data-srcset="{{> srcset}}" data-sizes="auto" src="{{img_url feature_image size="s"}}">
+            <div class="post-hover-title">{{title}}</div>
+            <div class="post-hover-background"></div>
+        </a>
+    </figure>
+</div>

@@ -1,22 +1,38 @@
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 4vw;
-    padding-left: 4vw;
-    max-width: calc(1140px + 8vw);
-    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 1020px) {
+    .container {
+        max-width: 990px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .container {
+        max-width: 1650px;
+    }
 }
 
 .container.large {
-    max-width: calc(960px + 8vw);
+    max-width: 1170px;
 }
 
 .container.medium {
-    max-width: calc(750px + 8vw);
+    max-width: 780px;
 }
 
 .container.small {
-    max-width: calc(640px + 8vw);
+    max-width: 670px;
 }
 
 .row {

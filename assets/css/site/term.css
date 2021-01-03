@@ -8,17 +8,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     font-size: 30px;
     font-weight: 800;
-}
-
-.term-name::before {
-    content: "";
-    margin-right: 10px;
-    width: 30px;
-    height: 3px;
-    background-color: var(--primary-color);
 }
 
 @media (max-width: 767px) {
