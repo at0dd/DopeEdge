@@ -2,11 +2,6 @@
     {{#if @site.logo}}
         <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
     {{else}}
-        {{#is "home"}}
-            <span class="logo-text text-white">{{@site.title}}</span>
-        {{else}}
-            <span class="logo-text">{{@site.title}}</span>
-        {{/is}}
-
+        <span class="logo-text">{{@site.title}}</span>
     {{/if}}
 </a>
